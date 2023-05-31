@@ -9,6 +9,10 @@ const accommodationSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  duration: {
+    type: Number,
+    required: true,
+  },
 });
 
 const Accommodation = mongoose.model('Accommodation', accommodationSchema);

@@ -37,12 +37,12 @@ const tourSchema = new mongoose.Schema({
     type: Number,
     required: true,
   },
-  destinations: [
-    {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: 'Destination',
-    },
-  ],
+  featured: {
+    type: mongoose.Schema.Types.Boolean,
+  },
+  offer: {
+    type: mongoose.Schema.Types.String,
+  },
   programs: [
     {
       type: mongoose.Schema.Types.ObjectId,
@@ -61,18 +61,6 @@ const tourSchema = new mongoose.Schema({
       ref: 'Qna',
     },
   ],
-  accommodations: [
-    {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: 'Accommodation',
-    },
-  ],
-  featured: {
-    type: mongoose.Schema.Types.Boolean,
-  },
-  offer: {
-    type: mongoose.Schema.Types.String,
-  },
 });
 
 const Tour = mongoose.model('Tour', tourSchema);
